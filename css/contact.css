@@ -1,0 +1,154 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  background: #222;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff6600;
+}
+
+header .logo span {
+  color: #6c5ce7;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #ff6600;
+}
+
+/* ===== MENU BURGER ===== */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+@media (max-width: 992px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(5px);
+    flex-direction: column;
+    display: none;
+    width: 140px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact-section {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #6c5ce7, #ff6600);
+  min-height: calc(100vh - 80px);
+}
+
+.contact-card {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  text-align: center;
+  animation: fadeInCard 1s ease;
+}
+
+.contact-card h1 {
+  margin-bottom: 20px;
+  color: #6c5ce7;
+}
+
+.contact-card p {
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background: #ff6600;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background: #6c5ce7;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeInCard {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: rgba(255, 102, 0, 0.8);
+  color: #6c5ce7;
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
+
+}

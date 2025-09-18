@@ -1,0 +1,246 @@
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  background: #222;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #ff6600;
+}
+header .logo span { 
+  color: #6c5ce7; 
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #ff6600;
+}
+
+/* ===== MENU BURGER ===== */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* ===== IMAGE DE PROFIL ===== */
+.profile-pic {
+  width: 180px;         
+  height: 180px;
+  border-radius: 50%;   /* cercle parfait */
+  object-fit: cover;    /* pas de déformation */
+  border: 4px solid #ff6600;
+  margin: 20px auto;    /* centrer l'image */
+  display: block;       /* bloque pour bien centrer */
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    width: 150px;
+    display: none;
+    flex-direction: column;
+    padding: 10px;
+    margin: 2px 0 0 0;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* === ici on affiche le burger sur petit écran === */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Image centrée au-dessus du texte */
+  .profile-pic {
+    float: none;
+    display: block;
+    margin: 20px auto;
+    shape-outside: none;
+    clip-path: none;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: rgba(255, 102, 0, 0.8);
+  color: #6c5ce7;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+/* ===== SECTION ABOUT ===== */
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff6600, #6c5ce7); /* dégradé orange → violet */
+}
+
+/* Carte avec animation */
+.about-card {
+  max-width: 650px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  text-align: center;
+  padding: 40px 30px;
+  transform: translateY(30px);
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animation au survol */
+.about-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+/* Animation au chargement */
+@keyframes fadeInUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Image */
+.about-card .profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #ff6600;
+  margin: 0 auto 20px auto;
+  display: block;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.about-card .profile-pic:hover {
+  transform: scale(1.05);
+  border-color: #6c5ce7;
+}
+
+/* Titre et texte */
+.about-card h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.about-card p {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+/* ==== frise de comptences==== */
+.skills {
+  margin-top: 20px;
+}
+
+.skill {
+  margin-bottom: 15px;
+}
+
+.skill p {
+  margin: 0 0 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.progress-bar {
+  width: 100%;
+  background: #f0f0f0;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 18px;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.progress {
+  height: 100%;
+  line-height: 18px;
+  text-align: right;
+  padding-right: 8px;
+  font-size: 12px;
+  color: #fff;
+  border-radius: 20px;
+  transition: width 1.5s ease-in-out;
+}
+
+.progress.htmlcss {
+  background: linear-gradient(90deg, #e44d26, #2a37e6);
+  width: 55%;
+}
+
+.progress.javascript {
+  background: linear-gradient(90deg, #e8276a, #be25ed);
+  color: #ffffff;
+  width: 32%;
+}
+
+.progress.phpsql {
+  background: linear-gradient(90deg, #474A8A, #e95127);
+  width: 25%;
+}
+/* Police principale du site */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background: #fafafa;
+}
+
+/* Titres en Montserrat pour bien ressortir */
+h1, h2, h3, .logo {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Texte léger */
+p, li {
+  font-weight: 300;
+}
