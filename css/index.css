@@ -137,6 +137,7 @@ nav ul li a:hover, .active {
 .hero-card .btn {
   display: inline-block;
   padding: 10px 25px;
+  margin: 8px;
   border-radius: 25px;
   background: #ff6600;
   color: #fff;
@@ -215,4 +216,12 @@ h1, h2, h3, .logo{
 /* Texte léger */
 p, li {
   font-weight: 300;
+}
+/* Quand l’écran est petit, on empile les boutons */
+@media (max-width: 600px) {
+  .hero-card .btn {
+    display: block;      /* les boutons prennent toute la largeur */
+    width: 100%;         /* bouton plein écran */
+    margin: 10px 0;      /* espace vertical */
+  }
 }
