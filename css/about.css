@@ -244,3 +244,36 @@ h1, h2, h3, .logo {
 p, li {
   font-weight: 300;
 }
+
+.cv-section {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.cv-section h2 {
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.cv-image {
+  width: 250px; /* Taille miniature */
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.cv-image:hover {
+  transform: scale(1.05);
+}
+
+.cv-buttons {
+  margin-top: 15px;
+}
+
+.cv-buttons .btn {
+  padding: 10px 20px;
+  font-weight: 500;
+  border-radius: 6px;
+}
+
