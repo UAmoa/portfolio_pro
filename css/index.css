@@ -217,6 +217,7 @@ h1, h2, h3, .logo{
 p, li {
   font-weight: 300;
 }
+
 /* Quand l’écran est petit, on empile les boutons */
 @media (max-width: 600px) {
   .hero-card .btn {
